@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Exercise HTML Page
+	</title>
+
+	<style type="text/css">
+		#Box {
+			background-color: yellow;
+		}
+		strong{
+			font-size:29 pt;
+			font-family: tahoma, sans-serif, arial;
+		}
+
+		.hint {
+			font-weight: thin;
+			font-size:10; 
+		}
+
+		body{
+			background-image:url("cover.jpg");
+		}
+		
+		#description{
+			color:#85144b;
+		}
+
+		input[type=search] {
+		  background-color: white;
+		  background-image: url('searchicon.png');
+		  background-position: 10px 10px;
+		  background-repeat: no-repeat;
+		  padding-left: 40px;
+		}
+		.search {
+		  background-color: white;
+		  background-image: url('searchicon.png');
+		  background-position: 10px 10px;
+		  background-repeat: no-repeat;
+		  padding-left: 40px;
+		}
+		em{
+			font-weight:bold;
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+
+	<h2>
+		New HTML5 Input Types Demo
+	</h2>
+	<strong id="description">
+		This form demo the new HTML5 input types and the placeholder required and autofocus attributes.
+	</strong>
+	<br>
+	<br>
+	<form>
+
+		<label>
+			<strong>
+			Color:
+			</strong>
+		</label>
+			<input type="color" name="Color">
+			(Hexidecimal Code such as #ADD8E6)
+		<br>
+		<br>
+		<label>
+			<strong>
+			Date:
+			</strong>
+		</label>
+			<input type="date" name="Date">
+			(yyyy-mm-dd)
+
+		<br>
+		<br>
+		<label>
+			<strong>
+			Email
+			</strong>
+		</label>
+			<input type="text" name="Email" placeholder="name@domain.com">
+			
+			(name@domain.com)
+
+		<br>
+		<br>
+		<label>
+			<strong>
+			Number:
+			</strong>
+		</label>
+			<input type="number" name="Number" min="0" max="7" value="0">
+			(Enter a number between <em>0</em> and <em>7</em>)
+		<br>
+		<br>
+		<label>
+			<strong>
+			Range:
+			</strong>
+		</label>
+			<em>
+			0
+			</em>
+			<input type="range" name="Range" min="0" max="20">
+			<em>
+			2
+			</em>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Date:
+			</strong>
+		</label>
+			<input type="search" name="Search" placeholder="search query" class="search">
+		
+		<br>
+		<br>
+		<label>
+			<strong>
+			Date:
+			</strong>
+		</label>
+			<input type="time" name="Time">
+		(hh:mm)
+
+		<br>
+		<br>
+		<input type="submit" name="Submit" value="Submit" id="Box">
+		<input type="reset" name="Clear" value="Clear" id="Box">
+
+	</form>
+
+
+</body>
+</html>
