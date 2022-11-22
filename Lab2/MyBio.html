@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Contact Form
+	</title>
+
+	<style type="text/css">
+		#Box {
+			background-color: yellow;
+		}
+		strong{
+			font-size:29 pt;
+			font-family: tahoma, sans-serif, arial;
+		}
+
+		.hint {
+			font-weight: thin;
+			font-size:10; 
+		}
+
+		body{
+			background-image:url("images/cover.jpg");
+		}
+		
+		#description{
+			color:#a13d6e;
+		}
+
+		input[type=search] {
+		  background-color: rgb(13, 12, 12);
+		  background-image: url('images/searchicon.png');
+		  background-position: 10px 10px;
+		  background-repeat: no-repeat;
+		  padding-left: 40px;
+		}
+		.search {
+		  background-color: rgb(12, 12, 12);
+		  background-image: url('images/searchicon.png');
+		  background-position: 10px 10px;
+		  background-repeat: no-repeat;
+		  padding-left: 40px;
+		}
+		em{
+			font-weight:bold;
+		}
+		form span{
+			font-size:15;
+			color:rgb(32, 6, 6);
+			font-weight:700
+		} 
+
+	</style>
+
+
+</head>
+
+<body>
+
+	<h1>
+		Ask me Questions!
+	</h1>
+	<strong id="description">
+		This webpage is to showcase my ability to make a input form
+	</strong>
+	<br>
+	<br>
+	<form>
+
+		<label>
+			<strong>
+			Color:
+			</strong>
+		</label>
+			<input type="color" name="Color">
+			<span>(Hexidecimal Code such as #ADD8E6)</span>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Date:
+			</strong>
+		</label>
+			<input type="date" name="Date">
+			<span>(yyyy-mm-dd)</span>
+
+		<br>
+		<br>
+		<label>
+			<strong>
+			Email
+			</strong>
+		</label>
+			<input type="text" name="Email" placeholder="name@domain.com">
+			<span>(name@domain.com)</span>
+
+		<br>
+		<br>
+		<label>
+			<strong>
+			Number:
+			</strong>
+		</label>
+			<input type="number" name="Number" min="0" max="7" value="0">
+			<span>(Enter a number between <em>0</em> and <em>7</em>)</span>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Range:
+			</strong>
+		</label>
+			<em>
+			0
+			</em>
+			<input type="range" name="Range" min="0" max="20">
+			<em>
+			2
+			</em>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Date:
+			</strong>
+		</label>
+			<input type="search" name="Search" placeholder="search query" class="search">
+		
+		<br>
+		<br>
+		<label>
+			<strong>
+			Date:
+			</strong>
+		</label>
+			<input type="time" name="Time">
+		<span>(hh:mm)</span>
+
+		<br>
+		<br>
+		<input type="submit" name="Submit" value="Submit" id="Box" action="https://google.com.tw">
+		<input type="reset" name="Clear" value="Clear" id="Box">
+		<a href="./FunFact.html">
+			<button>
+				NextPage
+			</button>
+		</a>
+	</form>
+
+
+</body>
+</html>
