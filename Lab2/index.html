@@ -1,83 +1,143 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>HomePage</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <style>
-        body {
-            background-color:burlywood;
-        }
-        .background {
-            background-size: 300px;
-            width: 300px;
-            height: 300px;
+	<title>
+		Contact Form
+	</title>
 
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-        
-        button {
-            
-                border: none;
-                color: white;
-                padding: 16px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                transition-duration: 0.4s;
-                cursor: pointer;
-                position:relative;
-                top:50%;
-                }
+	<style type="text/css">
+		#Box {
+			background-color: yellow;
+		}
+		strong{
+			font-size:29 pt;
+			font-family: tahoma, sans-serif, arial;
+		}
 
-        #left {
-            left:20%
-        }
+		.hint {
+			font-weight: thin;
+			font-size:10; 
+		}
 
-        #right {
-            left:45%
-        }
-        
-        .button_text {
-            text-align:center;
-            font-weight:900
-        }
-        .center {
-            text-align: center;
-        }
+		body{
+			background-image:url("images/cover.jpg");
+		}
+		
+		#description{
+			color:#a13d6e;
+		}
 
-    </style>
+		input[type=search] {
+		  background-color: rgb(13, 12, 12);
+		  background-image: url('images/searchicon.png');
+		  background-position: 10px 10px;
+		  background-repeat: no-repeat;
+		  padding-left: 40px;
+		}
+		.search {
+		  background-color: rgb(12, 12, 12);
+		  background-image: url('images/searchicon.png');
+		  background-position: 10px 10px;
+		  background-repeat: no-repeat;
+		  padding-left: 40px;
+		}
+		em{
+			font-weight:bold;
+		}
+		form span{
+			font-size:15;
+			color:rgb(32, 6, 6);
+			font-weight:700
+		} 
+
+	</style>
+
+
 </head>
+
 <body>
 
-    <h1 class="center">
-        Hi ! I'm John. Nice to meet you😊😊
-    </h1>
-    <h2 class="center">
-        I love coding and basketball
-    </h2>
-    <img src="images/hero-devices.svg" alt="Dev Pic" class="background">
-    <button id="left">
-        <a href="./FunFact.html" class="button_text">
-            My Skillsets
-        </a>
+	<h1>
+		Ask me Questions!
+	</h1>
+	<strong id="description">
+		This webpage is to showcase my ability to make a input form
+	</strong>
+	<br>
+	<br>
+	<form>
 
+		<label>
+			<strong>
+			Color:
+			</strong>
+		</label>
+			<input type="color" name="Color">
+			<span>(Hexidecimal Code such as #ADD8E6)</span>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Date:
+			</strong>
+		</label>
+			<input type="date" name="Date">
+			<span>(yyyy-mm-dd)</span>
 
-    </button>
-    
-    <button id="right">
-        <a href="./MyBio.html" class="button_text">
-            Contact Me
-        </a>
-    </button>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Email
+			</strong>
+		</label>
+			<input type="text" name="Email" placeholder="name@domain.com">
+			<span>(name@domain.com)</span>
+
+		<br>
+		<br>
+		<label>
+			<strong>
+			Your Lucky Number:
+			</strong>
+		</label>
+			<input type="number" name="Number" min="0" max="7" value="0">
+			<span>(Enter a number between <em>0</em> and <em>7</em>)</span>
+		<br>
+		<br>
+		<label>
+			<strong>
+			How cool are you
+			</strong>
+		</label>
+			<em>
+			0
+			</em>
+			<input type="range" name="Range" min="0" max="100">
+			<em>
+			100
+			</em>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Your Question:
+			</strong>
+		</label>
+			<textarea name="Questions" rows="4" cols="35" placeholder="Enter your questions here" class="questions">
+			</textarea>
+		<br>
+
+		<br>
+		<input type="submit" name="Submit" value="Submit" id="Box" action="https://google.com.tw">
+		<input type="reset" name="Clear" value="Clear" id="Box">
+
+	</form>
+	<a href="./FunFact.html">
+		<button>
+			NextPage
+		</button>
+	</a>
+
 </body>
 </html>
