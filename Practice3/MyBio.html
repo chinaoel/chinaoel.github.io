@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Contact Form
+	</title>
+
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="body_mybio">
+
+	<h1>
+		Ask me Questions!
+	</h1>
+	<strong id="description">
+		This webpage is to showcase my ability to make a input form
+	</strong>
+	<br>
+	<br>
+	<form>
+
+		<label>
+			<strong>
+			Color:
+			</strong>
+		</label>
+			<input type="color" name="Color">
+			<span>(Hexidecimal Code such as #ADD8E6)</span>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Date:
+			</strong>
+		</label>
+			<input type="date" name="Date">
+			<span>(yyyy-mm-dd)</span>
+
+		<br>
+		<br>
+		<label>
+			<strong>
+			Email
+			</strong>
+		</label>
+			<input type="text" name="Email" placeholder="name@domain.com">
+			<span>(name@domain.com)</span>
+
+		<br>
+		<br>
+		<label>
+			<strong>
+			Your Lucky Number:
+			</strong>
+		</label>
+			<input type="number" name="Number" min="0" max="7" value="0">
+			<span>(Enter a number between <em>0</em> and <em>7</em>)</span>
+		<br>
+		<br>
+		<label>
+			<strong>
+			How cool are you
+			</strong>
+		</label>
+			<em>
+			0
+			</em>
+			<input type="range" name="Range" min="0" max="100">
+			<em>
+			100
+			</em>
+		<br>
+		<br>
+		<label>
+			<strong>
+			Your Question:
+			</strong>
+		</label>
+			<textarea name="Questions" rows="4" cols="35" placeholder="Enter your questions here" class="questions">
+			</textarea>
+		<br>
+
+		<br>
+		<input type="submit" name="Submit" value="Submit" id="Box" action="https://google.com.tw">
+		<input type="reset" name="Clear" value="Clear" id="Box">
+
+	</form>
+	<a href="./FunFact.html">
+		<button>
+			NextPage
+		</button>
+	</a>
+
+</body>
+</html>

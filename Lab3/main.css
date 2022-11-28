@@ -1,0 +1,55 @@
+nav {font-family:Arial, Helvetica, sans-serif;
+    font-weight:900;
+    color:white;
+    border: 2px;
+    text-align:right;
+    width:20em;
+    background-color: royalblue;
+    
+    }
+
+
+nav ul li:hover {
+    background-color:powderblue;
+}
+nav ul li{
+    border-top: 2px solid;
+    background-color:white;
+    width:15em;
+    color:black;
+    margin:3px;
+    padding:3px;
+    border-right:3px;
+}
+nav ul {
+    list-style:none;
+    margin:0.1px;
+    padding:0.1px;
+    top:0.1ch;
+    left:0.1ch;
+    width:max-content;
+    position:relative;}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav:hover ul {
+    display:block;
+    
+}
+a {text-decoration: none;}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    color:black;
+    background-color:blanchedalmond;
+    padding: 10px;
+    font-size:large;
+    font-weight:800
+}
+
+h1 {text-align:center}
+
