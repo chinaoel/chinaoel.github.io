@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JS Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <script>
+        window.addEventListener("load",start);
+
+        function start(){
+            var button = document.getElementById("Calculate");
+            button.addEventListener("click", calculate);
+        }
+
+        function calculate(){
+            var op1 = parseFloat(document.getElementById("op1").value);
+            var op2 = parseFloat(document.getElementById("op2").value);
+            var operator = (document.getElementById("operator").value);
+            var result;
+
+            switch (operator){
+                case "add":
+                    result = (op1+op2);
+                    break;
+                case "minus":
+                    result = (op1-op2);
+                    break;
+                case "division":
+                    result = (op1/op2);
+                    break;
+                case "multiply":
+                    result = (op1*op2);
+                    break;
+            }
+            document.getElementById("result").value = result;
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <label>Number1</label>
+    <input type="text" id="op1" text="number1">
+    <label>Number2</label>
+    <input type="text" id="op2" text="number2">
+    <label>Opeator?</label>
+    <select name="operator" id="operator">
+        <option value="add">+</option>
+        <option value="minus">-</option>
+        <option value="multiply">*</option>
+        <option value="division">/</option>
+    </select>
+    <input type="button" id="Calculate" value="Calculate">
+    <input type="text" id="result" value="null">
+
+
+</body>
+</html>

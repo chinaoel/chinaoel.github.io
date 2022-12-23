@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    
+
+    <script>
+        const dieImages = [];
+        //  index 0 not used
+        const counts = [];
+
+        const vals = [];
+        var die1Image;
+        total = 0;
+
+        window.addEventListener("load",start);
+        function start()
+        {
+            var button = document.getElementById("rollButton");
+            //var print = document.getElementById("Print");
+            button.addEventListener("click", rollDice);
+            //print.addEventListener("click", Print);
+            for (var i = 1; i<= 12; i++){
+                dieImages[i] = document.getElementById("die"+i);
+            }
+
+            for (var i = 1; i<= 6; i++){
+                vals[i] = 0;
+            }
+
+            for (var i = 1; i<= 6; i++){
+                counts[i] = document.getElementById("v"+i);
+            }
+            
+        }
+
+        function setImage(dieImg){
+            var dieValue = Math.floor( 1 + Math.random() * 6);
+            dieImg.setAttribute("src","images/die"+dieValue+".png");
+            dieImg.setAttribute("alt","die iamge with "+dieValue+" spot(s)");
+            vals[dieValue] += 1;
+            total += 1;
+            
+        }
+        
+        function Print(){
+            for (var i = 1; i<= 6 ; i++){
+                document.getElementById("f"+i).setAttribute("value", vals[i]);
+                counts[i].setAttribute("value",Math.round(vals[i]/total*10000)/100);
+            }
+        }
+
+        
+
+        function rollDice(){
+            for (var i = 1; i<= 12; i++){
+                setImage(dieImages[i]);
+            }
+            Print();
+        }
+
+
+        
+
+    </script>
+
+</head>
+<body>
+    <form action="#">
+        <input id = "rollButton" type="button" value = "Roll Dice">
+        <!--<input id = "Print" type="button" value = "Print Distribution">-->
+
+    </form>
+    <img id="die1" src="images/die1.png" alt="blank image">
+    <img id="die2" src="images/die1.png" alt="blank image">
+    <img id="die3" src="images/die1.png" alt="blank image">
+    <img id="die4" src="images/die1.png" alt="blank image">
+    <img id="die5" src="images/die1.png" alt="blank image">
+    <img id="die6" src="images/die1.png" alt="blank image">
+    <br>
+    <img id="die7" src="images/die1.png" alt="blank image">
+    <img id="die8" src="images/die1.png" alt="blank image">
+    <img id="die9" src="images/die1.png" alt="blank image">
+    <img id="die10" src="images/die1.png" alt="blank image">
+    <img id="die11" src="images/die1.png" alt="blank image">
+    <img id="die12" src="images/die1.png" alt="blank image">
+
+
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-0pky">Face</th>
+            <th class="tg-0pky">Frequency</th>
+            <th class="tg-0pky">Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0pky">1</td>
+            <td class="tg-0pky"><input type="text" id="f1" value="0"/></td>
+            <td class="tg-0pky"><input type="text" id="v1" value="0"/></td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">2</td>
+            <td class="tg-0pky"><input type="text" id="f2" value="0"/></td>
+            <td class="tg-0pky"><input type="text" id="v2" value="0"/></td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">3</td>
+            <td class="tg-0pky"><input type="text" id="f3" value="0"/></td>
+            <td class="tg-0pky"><input type="text" id="v3" value="0"/></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">4</td>
+            <td class="tg-0pky"><input type="text" id="f4" value="0"/></td>
+            <td class="tg-0lax"><input type="text" id="v4" value="0"/></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0pky"><input type="text" id="f5" value="0"/></td>
+            <td class="tg-0lax"><input type="text" id="v5" value="0"/></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">6</td>
+            <td class="tg-0pky"><input type="text" id="f6" value="0"/></td>
+            <td class="tg-0lax"><input type="text" id="v6" value="0"/></td>
+          </tr>
+        </tbody>
+        </table>
+
+</body>
+</html>
