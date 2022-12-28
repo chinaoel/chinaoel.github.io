@@ -16,12 +16,25 @@
             button.addEventListener("click", calculate);
         }
 
+        function add(x,y){
+            return x+y;
+        }
+        function sub(x,y){
+            return x-y;
+        }
+        function mul(x,y){
+            return x*y;
+        }
+        function div(x,y){
+            return x/y;
+        }
+
         function calculate(){
             var op1 = parseFloat(document.getElementById("op1").value);
             var op2 = parseFloat(document.getElementById("op2").value);
             var operator = (document.getElementById("operator").value);
             var result;
-
+            /*
             switch (operator){
                 case "add":
                     result = (op1+op2);
@@ -36,12 +49,34 @@
                     result = (op1*op2);
                     break;
             }
+            */
+            
+            switch (operator){
+                case "add":
+                    result = add(op1,op2);
+                    break;
+                case "minus":
+                    result = sub(op1,op2);
+                    break;
+                case "division":
+                    result = div(op1,op2);
+                    break;
+                case "multiply":
+                    result = mul(op1,op2);
+                    break;
+            }
+            
             document.getElementById("result").value = result;
 
 
 
 
 
+        }
+
+        function Change(){
+            var operator = (document.getElementById("operator").value);
+            document.getElementById("Calculate").setAttribute("value",operator)
         }
     </script>
 </head>
@@ -51,13 +86,13 @@
     <label>Number2</label>
     <input type="text" id="op2" text="number2">
     <label>Opeator?</label>
-    <select name="operator" id="operator">
+    <select name="operator" id="operator" onchange="Change()">
         <option value="add">+</option>
         <option value="minus">-</option>
         <option value="multiply">*</option>
         <option value="division">/</option>
     </select>
-    <input type="button" id="Calculate" value="Calculate">
+    <input type="button" id="Calculate" value="add">
     <input type="text" id="result" value="null">
 
 
